@@ -26,13 +26,13 @@ def setup_logging():
         },
         "handlers": {
             "default": {
+                "()": logging.StreamHandler,
                 "formatter": "default",
-                "class": "logging.StreamHandler",
                 "stream": "ext://sys.stdout",
             },
             "json": {
+                "()": logging.StreamHandler,
                 "formatter": "json",
-                "class": "logging.StreamHandler",
                 "stream": "ext://sys.stdout",
             },
         },
